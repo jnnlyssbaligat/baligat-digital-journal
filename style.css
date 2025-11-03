@@ -1,0 +1,268 @@
+/* Font and Layout */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f6f4fb;
+    color: #3a2956;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    background: linear-gradient(135deg, #d9c7f5, #e9ddff);
+    color: #322049;
+    border-bottom: 3px solid #b99fe2;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    margin-bottom: 0.4rem;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #5c4787;
+}
+
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4d3b7b;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a689e1;
+}
+
+
+/* Sections */
+
+.section {
+    padding: 60px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.lilac {
+    background-color: #f1e8ff;
+}
+
+
+/* Box containers */
+
+.box {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border: 2px solid #cdb6f0;
+}
+
+.white-box {
+    background-color: #fdfaff;
+}
+
+
+/* Headings */
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #6a42a1;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* Paragraphs */
+
+p {
+    font-size: 1.05em;
+    color: #3a2956;
+}
+
+
+/* Image Grids */
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+figure {
+    width: 160px;
+    text-align: center;
+}
+
+figure img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #cdb6f0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.95em;
+    font-style: italic;
+    color: #604a87;
+}
+
+
+/* Quote / Mantra */
+
+blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7em;
+    background-color: #f4edff;
+    padding: 40px;
+    border-left: 5px solid #b59ee4;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    color: #4a3271;
+}
+
+.quote-sub {
+    font-size: 0.8em;
+    color: #7e64b8;
+}
+
+
+/* Contact */
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    color: #3b2565;
+}
+
+.contact-list li {
+    margin: 10px 0;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: #e9ddff;
+    color: #4b2f72;
+    font-size: 0.9em;
+    border-top: 3px solid #b99fe2;
+}
+
+
+/* Animations */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.appear {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  z-index: 100;
+  background-color: #e6d6fa; /* lilac background */
+  border: 2px solid #c2a8e2;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(122, 62, 177, 0.3);
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+/* Hover effect */
+#backToTop:hover {
+  background-color: #b794f4;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 6px 12px rgba(122, 62, 177, 0.4);
+}
+
+/* Fade-in animation */
+#backToTop.show {
+  display: flex;
+  opacity: 1;
+}
+
+/* Bouncing arrow animation */
+#backToTop svg {
+  animation: floatUpDown 1.8s ease-in-out infinite;
+}
+
+/* Keyframes for floating motion */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
